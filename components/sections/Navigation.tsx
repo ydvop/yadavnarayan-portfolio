@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Projects", href: "#work" },
 ];
 
-const resumeHref = "/resume.pdf";
+const resumeHref = "/Yadav%20Narayan%20Resume.pdf";
 const resumeDownloadName = "Yadav Narayan Resume.pdf";
 
 export function Navigation() {
