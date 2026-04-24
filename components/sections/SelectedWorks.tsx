@@ -13,6 +13,7 @@ const categories: Array<VideoCategory | "All"> = [
   "Podcasts",
   "Gaming",
   "Vlogs",
+  "Product Explainer",
 ];
 
 export function SelectedWorks() {

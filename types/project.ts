@@ -2,7 +2,8 @@ export type VideoCategory =
   | "Events"
   | "Podcasts"
   | "Gaming"
-  | "Vlogs";
+  | "Vlogs"
+  | "Product Explainer";
 
 export type VideoRole = "Editor" | "Motion" | "Sound" | "Full Stack";
 

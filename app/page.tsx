@@ -2,6 +2,7 @@ import { Navigation } from "@/components/sections/Navigation";
 import { Hero } from "@/components/sections/Hero";
 import { OrangeStatement } from "@/components/sections/OrangeStatement";
 import { SelectedWorks } from "@/components/sections/SelectedWorks";
+import { ShortFormContent } from "@/components/sections/ShortFormContent";
 import { Tools } from "@/components/sections/Tools";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <OrangeStatement />
       <SelectedWorks />
+      <ShortFormContent />
       <Tools />
       <Contact />
       <Footer />

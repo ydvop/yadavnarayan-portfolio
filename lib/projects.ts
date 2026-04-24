@@ -83,6 +83,18 @@ export const projects: Project[] = [
     featured: true,
     videos: [{ youtubeId: "Qq-qvJm8fRc" }],
   },
+  {
+    id: "cn-maestro-walkthrough",
+    title: "Cn-Maestro Walkthrough",
+    client: "Cambium Networks",
+    category: "Product Explainer",
+    role: "Motion Designer",
+    description:
+      "Product explainer walkthrough showcasing Cn-Maestro and its key workflow highlights.",
+    year: 2025,
+    featured: true,
+    videos: [{ youtubeId: "_ta59Wt_8Ik" }],
+  },
 ];
 
 export function getProjects(): Project[] {
