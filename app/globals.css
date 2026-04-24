@@ -104,6 +104,14 @@ html {
   z-index: -1;
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .video-editing-doodles::before {
+    position: absolute;
+    inset: 0;
+    background-attachment: scroll;
+  }
+}
+
 /* Hide scrollbar for drag carousel */
 .hide-scrollbar {
   -ms-overflow-style: none;
