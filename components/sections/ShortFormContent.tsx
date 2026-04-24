@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 type ReelCategory = "Sketch" | "Storytelling" | "Informative";
@@ -81,33 +81,6 @@ const reels: ReelItem[] = [
   },
 ];
 
-declare global {
-  interface Window {
-    instgrm?: {
-      Embeds?: {
-        process: () => void;
-      };
-    };
-  }
-}
-
-function loadInstagramEmbeds() {
-  return new Promise<void>((resolve) => {
-    const existing = document.getElementById("instagram-embed-script");
-    if (existing) {
-      resolve();
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.id = "instagram-embed-script";
-    script.src = "https://www.instagram.com/embed.js";
-    script.async = true;
-    script.onload = () => resolve();
-    document.body.appendChild(script);
-  });
-}
-
 export function ShortFormContent() {
   const [activeFilter, setActiveFilter] = useState<"All" | ReelCategory>("All");
   const filterBarRef = useRef<HTMLDivElement>(null);
@@ -144,31 +117,6 @@ export function ShortFormContent() {
       behavior: "smooth",
     });
   };
-
-  useEffect(() => {
-    let cancelled = false;
-    let timeoutId: number | undefined;
-
-    loadInstagramEmbeds().then(() => {
-      if (cancelled) return;
-
-      window.instgrm?.Embeds?.process?.();
-
-      timeoutId = window.setTimeout(() => {
-        window.instgrm?.Embeds?.process?.();
-        window.requestAnimationFrame(() => {
-          window.instgrm?.Embeds?.process?.();
-        });
-      }, 400);
-    });
-
-    return () => {
-      cancelled = true;
-      if (timeoutId !== undefined) {
-        window.clearTimeout(timeoutId);
-      }
-    };
-  }, [activeFilter]);
 
   return (
     <section
@@ -265,16 +213,12 @@ export function ShortFormContent() {
               >
                 <div className="relative bg-[#faf8f3] p-2 pb-0">
                   <div className="reel-embed-wrapper overflow-hidden rounded-2xl bg-[#f5f5f5] [max-height:390px]">
-                    <blockquote
-                      className="instagram-media"
-                      data-instgrm-permalink={reel.url}
-                      data-instgrm-version="14"
-                      style={{
-                        minWidth: "280px",
-                        maxWidth: "100%",
-                        width: "100%",
-                        margin: 0,
-                      }}
+                    <iframe
+                      src={`${reel.url.replace(/\/$/, "")}/embed/`}
+                      title={reel.title}
+                      className="block h-[585px] w-full border-0"
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                      loading="lazy"
                     />
                   </div>
                 </div>
