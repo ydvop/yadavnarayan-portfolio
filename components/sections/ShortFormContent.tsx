@@ -147,19 +147,28 @@ export function ShortFormContent() {
 
   useEffect(() => {
     let cancelled = false;
+    let timeoutId: number | undefined;
 
     loadInstagramEmbeds().then(() => {
       if (cancelled) return;
+
       window.instgrm?.Embeds?.process?.();
-      window.requestAnimationFrame(() => {
+
+      timeoutId = window.setTimeout(() => {
         window.instgrm?.Embeds?.process?.();
-      });
+        window.requestAnimationFrame(() => {
+          window.instgrm?.Embeds?.process?.();
+        });
+      }, 400);
     });
 
     return () => {
       cancelled = true;
+      if (timeoutId !== undefined) {
+        window.clearTimeout(timeoutId);
+      }
     };
-  }, [filteredReels]);
+  }, [activeFilter]);
 
   return (
     <section
