@@ -218,7 +218,7 @@ export function Contact() {
             <a
               href="https://www.youtube.com/@BhukaMendak"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               aria-label="YouTube Channel"
               className="text-[hsl(var(--text-muted))] transition-colors hover:text-[hsl(var(--accent-orange))]"
             >
@@ -229,7 +229,7 @@ export function Contact() {
             <a
               href="https://www.linkedin.com/in/yadavnarayan/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               aria-label="LinkedIn Profile"
               className="text-[hsl(var(--text-muted))] transition-colors hover:text-[hsl(var(--accent-orange))]"
             >
@@ -240,7 +240,7 @@ export function Contact() {
             <a
               href="https://www.instagram.com/bhukamendak"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               aria-label="Instagram Profile"
               className="text-[hsl(var(--text-muted))] transition-colors hover:text-[hsl(var(--accent-orange))] flex items-center"
             >

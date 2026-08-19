@@ -2,14 +2,31 @@ export function Footer() {
   return (
     <footer className="border-t border-[hsl(var(--border))] bg-[hsl(var(--bg-primary))] px-6 py-8 lg:px-8">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 sm:flex-row">
-        <p className="text-xs text-[hsl(var(--text-muted))]">
-          {"© 2026 Yadav Narayan. All rights reserved."}
-        </p>
+        <div className="flex flex-col items-center gap-1 sm:items-start">
+          <p className="text-xs text-[hsl(var(--text-muted))]">
+            {"© 2026 Yadav Narayan. All rights reserved."}
+          </p>
+          {/* The reciprocal half of the rel="me" pair with prodbeast.in.
+              "Founder of ProdBeast" is the anchor phrase on purpose — it is
+              the query this identity should answer, and a generic anchor
+              would tell a crawler nothing about what is on the other end. */}
+          <p className="text-xs text-[hsl(var(--text-muted))]">
+            {"Founder of "}
+            <a
+              href="https://www.prodbeast.in/founder"
+              target="_blank"
+              rel="me noopener noreferrer"
+              className="underline underline-offset-2 transition-colors hover:text-[hsl(var(--accent-orange))]"
+            >
+              ProdBeast
+            </a>
+          </p>
+        </div>
         <div className="flex gap-6">
           <a
             href="https://www.youtube.com/@BhukaMendak"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener noreferrer"
             aria-label="YouTube"
             className="text-[hsl(var(--text-muted))] transition-colors hover:text-[hsl(var(--accent-orange))]"
           >
@@ -20,7 +37,7 @@ export function Footer() {
           <a
             href="https://www.linkedin.com/in/yadavnarayan/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener noreferrer"
             aria-label="LinkedIn"
             className="text-[hsl(var(--text-muted))] transition-colors hover:text-[hsl(var(--accent-orange))]"
           >
@@ -31,7 +48,7 @@ export function Footer() {
           <a
             href="https://www.instagram.com/bhukamendak"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener noreferrer"
             aria-label="Instagram"
             className="text-[hsl(var(--text-muted))] transition-colors hover:text-[hsl(var(--accent-orange))] flex items-center"
           >

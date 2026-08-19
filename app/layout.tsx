@@ -98,17 +98,33 @@ export default function RootLayout({
               name: "Yadav Narayan",
               url: "https://www.yadavnarayan.in",
               image: "https://www.yadavnarayan.in/images/creator-portrait.jpg",
-              jobTitle: "Video Editor & Motion Designer",
+              // Every title he actually holds. prodbeast.in/founder describes
+              // the same person, and two pages giving one person different job
+              // titles is a weaker signal than two pages agreeing.
+              jobTitle: [
+                "Creative Production Lead, Happening Design Studio",
+                "Founder, ProdBeast",
+                "Video Editor & Motion Designer",
+              ],
               description:
-                "Video editor and motion designer based in Hyderabad, India. Specializing in motion graphics, brand animation, and video storytelling.",
+                "Video editor, motion designer and creative production lead based in Hyderabad, India. Founder of ProdBeast, a video review and publishing workspace for creators and editors.",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Hyderabad",
-                addressCountry: "India",
+                addressRegion: "Telangana",
+                // ISO 3166-1 alpha-2, which is what schema.org expects here —
+                // "India" is a country name, not a country code.
+                addressCountry: "IN",
               },
               worksFor: {
                 "@type": "Organization",
-                name: "Happening Design Studio Pvt Ltd",
+                name: "Happening Design Studio",
+                legalName: "Happening Design Studio Pvt Ltd",
+              },
+              founderOf: {
+                "@type": "Organization",
+                name: "ProdBeast",
+                url: "https://www.prodbeast.in",
               },
               sameAs: [
                 "https://www.instagram.com/bhukamendak",
@@ -116,6 +132,11 @@ export default function RootLayout({
                 "https://www.linkedin.com/in/yadavnarayan",
                 "https://x.com/bhukamendak",
                 "https://www.facebook.com/yadav.narayan.18",
+                // Reciprocal: that page lists this domain in its own sameAs.
+                // Pointing both ways is what lets an engine treat the two
+                // Person nodes as one verified identity rather than two
+                // unrelated claims about a common name.
+                "https://www.prodbeast.in/founder",
               ],
             }),
           }}
