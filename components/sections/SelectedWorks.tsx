@@ -40,18 +40,18 @@ export function SelectedWorks() {
   return (
     <section
       id="work"
-      className="relative bg-[hsl(var(--bg-warm))] px-6 py-24 lg:px-8"
+      className="relative bg-[hsl(var(--bg-warm))] py-24 2xl:py-32"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="container-shell">
         {/* Section Header */}
         <div className="mb-12 flex flex-col gap-3">
           <span className="text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent-orange))]">
             Selected Works
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-[#1a1a1a] lg:text-5xl text-balance font-sans">
+          <h2 className="text-3xl font-bold tracking-tight text-[#1a1a1a] lg:text-5xl 2xl:text-6xl text-balance font-sans">
             Projects that speak for themselves
           </h2>
-          <p className="max-w-2xl text-base text-[hsl(var(--text-muted))]">
+          <p className="max-w-2xl text-base 2xl:max-w-3xl 2xl:text-lg text-[hsl(var(--text-muted))]">
             Each project reflects a sharp eye for detail, strong narrative structure, and purposeful editing. From high-energy promos to podcasts and branded content, every video is crafted to engage audiences and elevate the brand's message with clarity and impact.
           </p>
         </div>
@@ -86,7 +86,7 @@ export function SelectedWorks() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="grid grid-cols-1 gap-6 md:grid-cols-2"
+            className="grid grid-cols-1 gap-6 md:grid-cols-2 2xl:gap-8 3xl:grid-cols-3"
           >
             {filtered.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i} />

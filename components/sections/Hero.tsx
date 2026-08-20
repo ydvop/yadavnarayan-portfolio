@@ -105,14 +105,14 @@ function IDCard() {
   return (
     <div className="flex flex-col items-center">
       {/* Lanyard strap */}
-      <div className="h-20 w-6 rounded-b bg-[#333] lg:h-28" />
+      <div className="h-20 w-6 rounded-b bg-[#333] lg:h-28 2xl:h-32" />
       {/* Clip connector */}
       <div className="h-4 w-10 rounded-b-sm bg-[#444]" />
       {/* Card body */}
       <div
         ref={cardRef}
         style={{ transform, transition: "transform 0.15s ease-out" }}
-        className="relative w-[260px] overflow-hidden rounded-2xl border-2 border-[#333] bg-[#1a1a1a] shadow-2xl lg:w-[320px]"
+        className="relative w-[260px] overflow-hidden rounded-2xl border-2 border-[#333] bg-[#1a1a1a] shadow-2xl lg:w-[320px] 2xl:w-[380px] 3xl:w-[420px]"
       >
         {/* Portfolio tag */}
         <div className="absolute top-3 right-4 z-10 rounded-sm bg-[#222] px-2.5 py-1">
@@ -127,7 +127,7 @@ function IDCard() {
             src="/images/creator-portrait.jpg"
             alt="Portrait"
             fill
-            sizes="(max-width:768px) 260px, 320px"
+            sizes="(max-width:768px) 260px, (max-width:1536px) 320px, (max-width:1920px) 380px, 420px"
             priority
             className="object-cover"
             crossOrigin="anonymous"
@@ -190,7 +190,7 @@ export function Hero() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.6, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute top-[28%] left-8 hidden lg:block"
+          className="absolute top-[28%] left-8 hidden lg:block 2xl:left-16 3xl:left-24"
         >
           <span className="text-sm font-semibold uppercase tracking-wider text-[hsl(var(--accent-orange))]">
             {"(HELLO! I'M YADAV)"}
@@ -202,7 +202,7 @@ export function Hero() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.8, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute right-4 bottom-[15%] lg:right-8 lg:bottom-[22%]"
+          className="absolute right-4 bottom-[15%] lg:right-8 lg:bottom-[22%] 2xl:right-16 3xl:right-24"
         >
           <RotatingFacts />
         </motion.div>
@@ -212,7 +212,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-10 flex items-end justify-between px-8 pb-8 lg:px-12"
+          className="relative z-10 flex items-end justify-between px-8 pb-8 lg:px-12 2xl:px-16 3xl:px-24"
         >
           {/* Section number */}
           <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[hsl(var(--border))]">

@@ -121,17 +121,17 @@ export function ShortFormContent() {
   return (
     <section
       id="short-form-content"
-      className="relative bg-[hsl(var(--bg-primary))] px-6 py-24 lg:px-8"
+      className="relative bg-[hsl(var(--bg-primary))] py-24 2xl:py-32"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="container-shell">
         <div className="mb-12 flex flex-col gap-3">
           <span className="text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent-orange))]">
             Short Form Content
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-white lg:text-5xl text-balance font-sans">
+          <h2 className="text-3xl font-bold tracking-tight text-white lg:text-5xl 2xl:text-6xl text-balance font-sans">
             Reel stories built for fast attention
           </h2>
-          <p className="max-w-2xl text-base text-[hsl(var(--text-muted))]">
+          <p className="max-w-2xl text-base 2xl:max-w-3xl 2xl:text-lg text-[hsl(var(--text-muted))]">
             Storytelling that pulls viewers in, keeps the emotion moving, and
             turns every frame into something worth remembering. Each reel sits
             inside a clean portfolio frame that keeps the narrative front and
@@ -209,7 +209,7 @@ export function ShortFormContent() {
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="min-w-[260px] max-w-[340px] flex-[0_0_78%] overflow-hidden rounded-3xl border border-[hsl(var(--border))] bg-[hsl(var(--bg-secondary))] shadow-[0_12px_40px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 sm:flex-[0_0_42%] lg:flex-[0_0_28%]"
+                className="min-w-[260px] max-w-[340px] flex-[0_0_78%] 2xl:max-w-[380px] overflow-hidden rounded-3xl border border-[hsl(var(--border))] bg-[hsl(var(--bg-secondary))] shadow-[0_12px_40px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 sm:flex-[0_0_42%] lg:flex-[0_0_28%]"
               >
                 <div className="relative bg-[#faf8f3] p-2 pb-0">
                   <div className="reel-embed-wrapper overflow-hidden rounded-2xl bg-[#f5f5f5] [max-height:390px]">

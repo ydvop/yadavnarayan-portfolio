@@ -73,8 +73,8 @@ export function OrangeStatement() {
         ref={stickyRef}
         className="sticky top-0 flex h-screen items-center justify-center px-6 lg:px-8"
       >
-        <div className="mx-auto max-w-5xl">
-          <p className="flex flex-wrap justify-center gap-x-[0.35em] gap-y-[0.15em] text-center text-[7vw] font-black leading-[1.15] tracking-tight sm:text-[5vw] lg:text-[3.5vw]">
+        <div className="mx-auto max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl">
+          <p className="flex flex-wrap justify-center gap-x-[0.35em] gap-y-[0.15em] text-center text-[7vw] font-bold leading-[1.15] tracking-tight sm:text-[5vw] lg:text-[3.5vw]">
             {STATEMENT_WORDS.map((word, i) => {
               // Each word transitions from muted to fully visible
               const wordProgress = Math.max(0, Math.min(1, filledUpTo - i));

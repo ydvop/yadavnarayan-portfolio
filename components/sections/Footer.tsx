@@ -1,7 +1,7 @@
 export function Footer() {
   return (
-    <footer className="border-t border-[hsl(var(--border))] bg-[hsl(var(--bg-primary))] px-6 py-8 lg:px-8">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 sm:flex-row">
+    <footer className="border-t border-[hsl(var(--border))] bg-[hsl(var(--bg-primary))] py-8">
+      <div className="flex w-full flex-col items-center justify-between gap-4 px-6 sm:flex-row lg:px-8 2xl:px-12 3xl:px-16">
         <div className="flex flex-col items-center gap-1 sm:items-start">
           <p className="text-xs text-[hsl(var(--text-muted))]">
             {"© 2026 Yadav Narayan. All rights reserved."}

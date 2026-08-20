@@ -84,14 +84,14 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="bg-[hsl(var(--bg-primary))] px-6 py-24 lg:px-8"
+      className="bg-[hsl(var(--bg-primary))] px-6 py-24 lg:px-8 2xl:py-32"
     >
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-3xl 2xl:max-w-4xl">
         <div className="mb-12 flex flex-col gap-3 text-center">
           <span className="text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent-orange))]">
             Get in Touch
           </span>
-          <h2 className="text-4xl font-black tracking-tight text-[hsl(var(--text-primary))] lg:text-5xl text-balance">
+          <h2 className="text-4xl font-black tracking-tight text-[hsl(var(--text-primary))] lg:text-5xl 2xl:text-6xl text-balance">
             {"Let's create something extraordinary"}
           </h2>
           <p className="text-base text-[hsl(var(--text-muted))]">

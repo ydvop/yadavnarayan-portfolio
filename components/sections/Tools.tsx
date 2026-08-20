@@ -30,13 +30,13 @@ export function Tools() {
       className="relative overflow-hidden py-24 lg:py-32"
       style={{ backgroundColor: "#f0ece6" }}
     >
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+      <div className="container-shell max-w-6xl 2xl:max-w-[80rem] 3xl:max-w-[90rem]">
         {/* Header */}
         <div className="mb-16 flex flex-col items-center gap-3 text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[hsl(var(--accent-orange))]">
             MY TOOLKIT
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-[#1a1a1a] lg:text-5xl text-balance font-sans">
+          <h2 className="text-3xl font-bold tracking-tight text-[#1a1a1a] lg:text-5xl 2xl:text-6xl text-balance font-sans">
             Tools I use to create magic
           </h2>
           <p className="mt-2 max-w-md text-base text-[#666]">
@@ -46,7 +46,7 @@ export function Tools() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:gap-4">
           {tools.map((tool, i) => {
             const isHovered = hoveredIndex === i;
 

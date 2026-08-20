@@ -52,6 +52,49 @@
   }
 }
 
+/* Shared responsive page container.
+   Keeps every section aligned to the same gutters and lets the content
+   keep growing on 1440px+ / ultrawide displays instead of capping at 1280px. */
+@layer components {
+  .container-shell {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem; /* 1280px */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .container-shell {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container-shell {
+      max-width: 90rem; /* 1440px */
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .container-shell {
+      max-width: 105rem; /* 1680px */
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+
+  @media (min-width: 2400px) {
+    .container-shell {
+      max-width: 120rem; /* 1920px */
+    }
+  }
+}
+
 /* Global focus visible */
 :focus-visible {
   outline: 3px solid hsl(13 100% 60%);

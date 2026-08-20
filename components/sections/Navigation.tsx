@@ -46,7 +46,7 @@ export function Navigation() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-8 py-5 lg:px-12">
+      <div className="container-shell flex items-center justify-between py-5">
         <a
           href="#"
           className={`text-sm font-bold uppercase tracking-wider transition-colors duration-300 ${
