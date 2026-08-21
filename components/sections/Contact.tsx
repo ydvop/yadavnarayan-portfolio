@@ -84,17 +84,17 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="bg-[hsl(var(--bg-primary))] px-6 py-24 lg:px-8 2xl:py-32"
+      className="bg-[hsl(var(--bg-primary))] section-y"
     >
-      <div className="mx-auto max-w-3xl 2xl:max-w-4xl">
+      <div className="container-shell mx-auto w-full max-w-[clamp(48rem,72vw,84rem)]">
         <div className="mb-12 flex flex-col gap-3 text-center">
-          <span className="text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent-orange))]">
+          <span className="fluid-eyebrow font-semibold uppercase tracking-widest text-[hsl(var(--accent-orange))]">
             Get in Touch
           </span>
-          <h2 className="text-4xl font-black tracking-tight text-[hsl(var(--text-primary))] lg:text-5xl 2xl:text-6xl text-balance">
+          <h2 className="fluid-h2 font-black tracking-tight text-[hsl(var(--text-primary))] text-balance">
             {"Let's create something extraordinary"}
           </h2>
-          <p className="text-base text-[hsl(var(--text-muted))]">
+          <p className="fluid-body text-[hsl(var(--text-muted))]">
             Have a project in mind? Drop me a line and {"let's"} talk.
           </p>
         </div>

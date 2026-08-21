@@ -27,26 +27,26 @@ export function Tools() {
   return (
     <section
       id="tools"
-      className="relative overflow-hidden py-24 lg:py-32"
+      className="relative overflow-hidden section-y"
       style={{ backgroundColor: "#f0ece6" }}
     >
-      <div className="container-shell max-w-6xl 2xl:max-w-[80rem] 3xl:max-w-[90rem]">
+      <div className="container-shell">
         {/* Header */}
         <div className="mb-16 flex flex-col items-center gap-3 text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[hsl(var(--accent-orange))]">
             MY TOOLKIT
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-[#1a1a1a] lg:text-5xl 2xl:text-6xl text-balance font-sans">
+          <h2 className="fluid-h2 font-bold tracking-tight text-[#1a1a1a] text-balance font-sans">
             Tools I use to create magic
           </h2>
-          <p className="mt-2 max-w-md text-base text-[#666]">
+          <p className="fluid-body mt-2 max-w-[46ch] text-[#666]">
             From editing suites to design tools, these are the instruments
             behind every project.
           </p>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:gap-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-8 2xl:gap-4 3xl:grid-cols-10">
           {tools.map((tool, i) => {
             const isHovered = hoveredIndex === i;
 

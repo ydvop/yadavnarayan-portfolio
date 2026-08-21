@@ -112,7 +112,7 @@ function IDCard() {
       <div
         ref={cardRef}
         style={{ transform, transition: "transform 0.15s ease-out" }}
-        className="relative w-[260px] overflow-hidden rounded-2xl border-2 border-[#333] bg-[#1a1a1a] shadow-2xl lg:w-[320px] 2xl:w-[380px] 3xl:w-[420px]"
+        className="relative w-[clamp(260px,24vw,560px)] overflow-hidden rounded-2xl border-2 border-[#333] bg-[#1a1a1a] shadow-2xl"
       >
         {/* Portfolio tag */}
         <div className="absolute top-3 right-4 z-10 rounded-sm bg-[#222] px-2.5 py-1">
@@ -127,17 +127,17 @@ function IDCard() {
             src="/images/creator-portrait.jpg"
             alt="Portrait"
             fill
-            sizes="(max-width:768px) 260px, (max-width:1536px) 320px, (max-width:1920px) 380px, 420px"
+            sizes="(max-width:768px) 260px, 24vw"
             priority
             className="object-cover"
             crossOrigin="anonymous"
           />
           {/* Role text overlaid at bottom */}
           <div className="absolute bottom-0 left-0 w-full px-4 pb-4">
-            <span className="block text-2xl font-black uppercase leading-tight tracking-tight text-[hsl(var(--text-primary))] lg:text-3xl">
+            <span className="block text-[clamp(1.5rem,2vw,3rem)] font-black uppercase leading-tight tracking-tight text-[hsl(var(--text-primary))]">
               EDITOR &
             </span>
-            <span className="block text-2xl font-black uppercase leading-tight tracking-tight text-[hsl(var(--text-primary))] lg:text-3xl">
+            <span className="block text-[clamp(1.5rem,2vw,3rem)] font-black uppercase leading-tight tracking-tight text-[hsl(var(--text-primary))]">
               MOTION DESIGNER
             </span>
           </div>
@@ -190,7 +190,7 @@ export function Hero() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.6, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute top-[28%] left-8 hidden lg:block 2xl:left-16 3xl:left-24"
+          className="absolute top-[28%] left-[var(--gutter)] hidden lg:block"
         >
           <span className="text-sm font-semibold uppercase tracking-wider text-[hsl(var(--accent-orange))]">
             {"(HELLO! I'M YADAV)"}
@@ -202,7 +202,7 @@ export function Hero() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.8, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute right-4 bottom-[15%] lg:right-8 lg:bottom-[22%] 2xl:right-16 3xl:right-24"
+          className="absolute right-4 bottom-[15%] lg:right-[var(--gutter)] lg:bottom-[22%]"
         >
           <RotatingFacts />
         </motion.div>
@@ -212,7 +212,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-10 flex items-end justify-between px-8 pb-8 lg:px-12 2xl:px-16 3xl:px-24"
+          className="relative z-10 flex items-end justify-between px-[var(--gutter)] pb-8"
         >
           {/* Section number */}
           <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[hsl(var(--border))]">
